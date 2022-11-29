@@ -33,7 +33,6 @@ const CharInfo = (props) => {
     }
 
     const skeleton = char || loading || error ? null : <Skeleton/>;
-
     const errorMessage = error ? <ErrorMessage/> : null;
     const spinner = loading ? <Spinner/> : null;
     const content = !(loading || error || !char) ? <View char={char} /> : null;
@@ -47,6 +46,12 @@ const CharInfo = (props) => {
         </div>
     )
 }
+
+// Ожидание
+// Получение заказа
+// Доставка
+// Получения оплаты
+// FSM - finite-state machine
 
 
 const View = ({char}) => {
